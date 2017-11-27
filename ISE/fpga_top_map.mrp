@@ -11,7 +11,7 @@ Target Device  : xc5vlx50
 Target Package : ff676
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.51.18.1 $
-Mapped Date    : Mon Nov 27 15:32:22 2017
+Mapped Date    : Mon Nov 27 16:48:32 2017
 
 Design Summary
 --------------
@@ -21,11 +21,11 @@ Slice Logic Utilization:
   Number of Slice Registers:                 3,256 out of  28,800   11%
     Number used as Flip Flops:               3,254
     Number used as Latches:                      2
-  Number of Slice LUTs:                      2,297 out of  28,800    7%
-    Number used as logic:                    2,262 out of  28,800    7%
-      Number using O6 output only:           1,822
+  Number of Slice LUTs:                      2,286 out of  28,800    7%
+    Number used as logic:                    2,251 out of  28,800    7%
+      Number using O6 output only:           1,812
       Number using O5 output only:             243
-      Number using O5 and O6:                  197
+      Number using O5 and O6:                  196
     Number used as Memory:                      17 out of   7,680    1%
       Number used as Dual Port RAM:              8
         Number using O6 output only:             4
@@ -33,16 +33,15 @@ Slice Logic Utilization:
       Number used as Shift Register:             9
         Number using O6 output only:             9
     Number used as exclusive route-thru:        18
-  Number of route-thrus:                       262
-    Number using O6 output only:               261
-    Number using O5 output only:                 1
+  Number of route-thrus:                       260
+    Number using O6 output only:               260
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,368 out of   7,200   19%
-  Number of LUT Flip Flop pairs used:        4,233
-    Number with an unused Flip Flop:           977 out of   4,233   23%
-    Number with an unused LUT:               1,936 out of   4,233   45%
-    Number of fully used LUT-FF pairs:       1,320 out of   4,233   31%
+  Number of occupied Slices:                 1,256 out of   7,200   17%
+  Number of LUT Flip Flop pairs used:        4,115
+    Number with an unused Flip Flop:           859 out of   4,115   20%
+    Number with an unused LUT:               1,829 out of   4,115   44%
+    Number of fully used LUT-FF pairs:       1,427 out of   4,115   34%
     Number of unique control sets:             124
     Number of slice register sites lost
       to control set restrictions:             151 out of  28,800    1%
@@ -68,9 +67,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.57
 
-Peak Memory Usage:  815 MB
-Total REAL time to MAP completion:  33 secs 
-Total CPU time to MAP completion:   31 secs 
+Peak Memory Usage:  826 MB
+Total REAL time to MAP completion:  36 secs 
+Total CPU time to MAP completion:   36 secs 
 
 Table of Contents
 -----------------
@@ -150,41 +149,41 @@ WARNING:PhysDesignRules:367 - The signal <DIP<7>_IBUF> is incomplete. The signal
 WARNING:PhysDesignRules:367 - The signal <CLK_33MHZ_FPGA_IBUF> is incomplete.
    The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL is set but the tri state is not configured. 
+   ProtoComp477.PULL is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.1 is set but the tri state is not configured. 
+   ProtoComp477.PULL.1 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.2 is set but the tri state is not configured. 
+   ProtoComp477.PULL.2 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.3 is set but the tri state is not configured. 
+   ProtoComp477.PULL.3 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.4 is set but the tri state is not configured. 
+   ProtoComp477.PULL.4 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.5 is set but the tri state is not configured. 
+   ProtoComp477.PULL.5 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.6 is set but the tri state is not configured. 
+   ProtoComp477.PULL.6 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.7 is set but the tri state is not configured. 
+   ProtoComp477.PULL.7 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.8 is set but the tri state is not configured. 
+   ProtoComp477.PULL.8 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.9 is set but the tri state is not configured. 
+   ProtoComp477.PULL.9 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.10 is set but the tri state is not configured. 
+   ProtoComp477.PULL.10 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.11 is set but the tri state is not configured. 
+   ProtoComp477.PULL.11 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.12 is set but the tri state is not configured. 
+   ProtoComp477.PULL.12 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.13 is set but the tri state is not configured. 
+   ProtoComp477.PULL.13 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.14 is set but the tri state is not configured. 
+   ProtoComp477.PULL.14 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.15 is set but the tri state is not configured. 
+   ProtoComp477.PULL.15 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.16 is set but the tri state is not configured. 
+   ProtoComp477.PULL.16 is set but the tri state is not configured. 
 WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp490.PULL.17 is set but the tri state is not configured. 
+   ProtoComp477.PULL.17 is set but the tri state is not configured. 
 
 Section 3 - Informational
 -------------------------

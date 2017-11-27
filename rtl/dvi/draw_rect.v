@@ -56,11 +56,13 @@ reg		[11-1: 0]		r_pos_y;
 
 reg								area;
 
-reg [0:256] board = 256'd16440;
+reg [1025:0] board;
 
 assign i_sync_all = i_sync_vs & i_sync_hs & i_sync_va & i_sync_ha & i_sync_de;
 always @ (posedge clk or negedge rst_n) begin
 	if (~rst_n) begin
+		board <= 1026'd16640;
+		
 		r_cnt_x	<= 11'd0;
 		r_cnt_y	<= 11'd0;
 	end else if (i_sync_all) begin
@@ -77,16 +79,18 @@ always @ (posedge clk or negedge rst_n) begin
 	end
 end
 
+wire [3:0] tmp;
+assign tmp = ((r_cnt_y >> 4) * 10 + (r_cnt_x >> 4)) * 4;
+
 // AREA
-always @ (*) begin
-	
+always @ (*) begin	
 	if ((r_cnt_x > 320) || r_cnt_y > 640) begin
 		area <= 1;
 	end else if ((r_cnt_x >> 1) % 16 == 0) begin
 		area <= 0;
 	end else if ((r_cnt_y >> 1) % 16 == 0) begin
 		area <= 0;
-	end else if (board[(r_cnt_y >> 4) * 10 + (r_cnt_x >> 4)]) begin
+	end else if (board[tmp+:4] != 4'd0) begin
 		area <= 1;
 	end else begin
 		area <= 0;

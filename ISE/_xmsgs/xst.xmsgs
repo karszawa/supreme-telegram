@@ -11,9 +11,6 @@
 <msg type="info" file="Xst" num="1433" delta="unknown" >Contents of array &lt;<arg fmt="%s" index="1">disp_buf_1</arg>&gt; may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
 </msg>
 
-<msg type="info" file="Xst" num="1607" delta="unknown" >Contents of array &lt;<arg fmt="%s" index="1">board</arg>&gt; may be accessed with an index that does not cover the full array size.
-</msg>
-
 <msg type="info" file="Xst" num="2679" delta="unknown" >Register &lt;<arg fmt="%s" index="1">i</arg>&gt; in unit &lt;<arg fmt="%s" index="2">disp_digit</arg>&gt; has a constant value of <arg fmt="%s" index="3">10000000</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
@@ -1358,7 +1355,13 @@
 <msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">r_pos_x</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">board</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000111000</arg>.
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">board&lt;1025:19&gt;</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">board&lt;18:0&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">0000000000000000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="643" delta="unknown" >&quot;<arg fmt="%s" index="1">../rtl/dvi/draw_rect.v</arg>&quot; line <arg fmt="%d" index="2">81</arg>: The result of a <arg fmt="%d" index="3">32</arg>x<arg fmt="%d" index="4">4</arg>-bit multiplication is partially used. Only the <arg fmt="%d" index="5">2</arg> least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
 </msg>
 
 <msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">write_r</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
@@ -1893,7 +1896,7 @@ It will be removed from the design.
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">o_tx_addr_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">tele_tx</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;o_tx_data_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">o_sync_red_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">draw_rect</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">8 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;o_sync_red_1&gt; &lt;o_sync_red_2&gt; &lt;o_sync_red_3&gt; &lt;o_sync_red_4&gt; &lt;o_sync_red_5&gt; &lt;o_sync_red_6&gt; &lt;o_sync_red_7&gt; &lt;o_sync_blu_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">o_sync_blu_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">draw_rect</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">8 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;o_sync_red_0&gt; &lt;o_sync_red_1&gt; &lt;o_sync_red_2&gt; &lt;o_sync_red_3&gt; &lt;o_sync_red_4&gt; &lt;o_sync_red_5&gt; &lt;o_sync_red_6&gt; &lt;o_sync_red_7&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">o_addr_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">tele_err</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;o_addr_4&gt; &lt;o_addr_5&gt; &lt;o_addr_6&gt; </arg>
