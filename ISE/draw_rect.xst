@@ -1,0 +1,6 @@
+set -tmpdir "/home/jikken17/FPGA_TOP/ISE/xst/projnav.tmp"
+set -xsthdpdir "/home/jikken17/FPGA_TOP/ISE/xst"
+elaborate
+-lso draw_rect.lso
+-ifn draw_rect.prj
+-ifmt mixed

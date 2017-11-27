@@ -1,0 +1,3 @@
+verilog work "../rtl/dvi/draw_rect.v"
+verilog work "clock_gen.v"
+verilog work "clockgen.v"

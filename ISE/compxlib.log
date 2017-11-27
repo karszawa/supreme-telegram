@@ -1,0 +1,50 @@
+    ____  ____
+   /   /\/   /
+  /___/  \  /    VENDOR      : Xilinx Inc.
+  \   \   \/     VERSION     : 11.1 (L.57)
+   \   \         APPLICATION : /mnt/cad/Xilinx/11.1/ISE/bin/lin64/unwrapped/compxlib
+   /   /         CONTENTS    : Compilation Log
+  /___/   /\     FILENAME    : compxlib.log
+  \   \  /  \    
+   \___\/\___\
+
+Release 11.1 - /mnt/cad/Xilinx/11.1/ISE/bin/lin64/unwrapped/compxlib 11.1 (lin64)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+
+Processing command line ...
+ERROR:Compxlib:258 - COMPXLIB[option]: Invalid library 'edk' specified for -lib.
+
+<ToolTip>: run 'compxlib -help lib' to list the names of valid libraries
+Library Source Paths => '/mnt/cad/Xilinx/11.1/ISE'
+Current Working Directory => '/home/jikken17/FPGA_TOP/ISE'
+Compilation Mode = FAST
+Execute Mode = ON
+Scheduling library installation & compilation for architectures: virtex5
+
+Scheduling library installation & compilation for libraries: simprim unisim xilinxcorelib
+
+Signature:-
+------------------------------------------------------------------------------
+/mnt/cad/Xilinx/11.1/ISE/bin/lin64/unwrapped/compxlib -s ncsim -l verilog -arch virtex5 -lib unisim -lib simprim -lib xilinxcorelib -lib edk -exclude_deprecated -intstyle ise 
+------------------------------------------------------------------------------
+
+Setting up the simulator 'ncsim' for compilation ...
+Setting up the source libraries for simulator 'ncsim' ...
+
+
+
+Compiling Xilinx HDL Libraries for 'ncsim' simulator
+TOOL:	ncvhdl	08.20-s026
+Language => 'verilog'
+The cds.lib file not found, create it.
+The hdl.var file not found, create it.
+Output directory => '/mnt/cad/Xilinx/11.1/ISE'
+
+WARNING:Compxlib:312 - Output directory '/mnt/cad/Xilinx/11.1/ISE/verilog/ncsim/08.20-s026/lin64' does not exist, it will be created.
+ERROR:Compxlib:228 - COMPXLIB[dir]: unable to create directory '/mnt/cad/Xilinx/11.1/ISE/verilog/ncsim/08.20-s026/lin64'.
+WARNING:Compxlib:312 - Output directory '/mnt/cad/Xilinx/11.1/ISE/verilog/ncsim/08.20-s026/lin64' does not exist, it will be created.
+ERROR:Compxlib:228 - COMPXLIB[dir]: unable to create directory '/mnt/cad/Xilinx/11.1/ISE/verilog/ncsim/08.20-s026/lin64'.
+WARNING:Compxlib:312 - Output directory '/mnt/cad/Xilinx/11.1/ISE/verilog/ncsim/08.20-s026/lin64' does not exist, it will be created.
+ERROR:Compxlib:228 - COMPXLIB[dir]: unable to create directory '/mnt/cad/Xilinx/11.1/ISE/verilog/ncsim/08.20-s026/lin64'.
+WARNING:Compxlib:312 - Output directory '/mnt/cad/Xilinx/11.1/ISE/verilog/ncsim/08.20-s026/lin64' does not exist, it will be created.
+ERROR:Compxlib:228 - COMPXLIB[dir]: unable to create directory '/mnt/cad/Xilinx/11.1/ISE/verilog/ncsim/08.20-s026/lin64'.

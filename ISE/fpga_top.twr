@@ -1,0 +1,680 @@
+--------------------------------------------------------------------------------
+Release 11.1 Trace  (lin64)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+
+/mnt/cad/Xilinx/11.1/ISE/bin/lin64/unwrapped/trce -ise
+/home/jikken17/FPGA_TOP/ISE/ISE.ise -intstyle ise -v 3 -s 1 -fastpaths -xml
+fpga_top.twx fpga_top.ncd -o fpga_top.twr fpga_top.pcf
+
+Design file:              fpga_top.ncd
+Physical constraint file: fpga_top.pcf
+Device,package,speed:     xc5vlx50,ff676,-1 (PRODUCTION 1.66 2009-08-24, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   8.332ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 1.668ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 8.332ns (120.019MHz) (Tdcmpc)
+  Physical resource: A_CRG/DCM_ADV_INST/CLKIN
+  Logical resource: A_CRG/DCM_ADV_INST/CLKIN
+  Location pin: DCM_ADV_X0Y0.CLKIN
+  Clock network: A_CRG/CLKIN_IBUFG
+--------------------------------------------------------------------------------
+Slack: 1.668ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 8.332ns (120.019MHz) (Tdcmpco)
+  Physical resource: A_CRG/DCM_ADV_INST/CLK0
+  Logical resource: A_CRG/DCM_ADV_INST/CLK0
+  Location pin: DCM_ADV_X0Y0.CLK0
+  Clock network: A_CRG/CLK0_BUF
+--------------------------------------------------------------------------------
+Slack: 4.666ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 2.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: A_CRG/DCM_ADV_INST/CLKIN
+  Logical resource: A_CRG/DCM_ADV_INST/CLKIN
+  Location pin: DCM_ADV_X0Y0.CLKIN
+  Clock network: A_CRG/CLKIN_IBUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_A_CRG_CLKFX_BUF = PERIOD TIMEGRP "A_CRG_CLKFX_BUF" 
+TS_sys_clk_pin * 0.75         HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.400ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_A_CRG_CLKFX_BUF = PERIOD TIMEGRP "A_CRG_CLKFX_BUF" TS_sys_clk_pin * 0.75
+        HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 10.933ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 13.333ns
+  High pulse: 6.666ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_10_OBUF/SR
+  Logical resource: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf/bit[10].ODDR/SR
+  Location pin: OLOGIC_X0Y198.SR
+  Clock network: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+Slack: 10.933ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 13.333ns
+  High pulse: 6.666ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_11_OBUF/SR
+  Logical resource: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf/bit[11].ODDR/SR
+  Location pin: OLOGIC_X0Y199.SR
+  Clock network: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+Slack: 10.933ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 13.333ns
+  High pulse: 6.666ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_0_OBUF/SR
+  Logical resource: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf/bit[0].ODDR/SR
+  Location pin: OLOGIC_X0Y188.SR
+  Clock network: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_A_CRG_CLKFX_BUF_1 = PERIOD TIMEGRP "A_CRG_CLKFX_BUF_1" 
+TS_sys_clk_pin *         0.75 HIGH 50%;
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.400ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_A_CRG_CLKFX_BUF_1 = PERIOD TIMEGRP "A_CRG_CLKFX_BUF_1" TS_sys_clk_pin *
+        0.75 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 10.933ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 13.333ns
+  High pulse: 6.666ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_10_OBUF/SR
+  Logical resource: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf/bit[10].ODDR/SR
+  Location pin: OLOGIC_X0Y198.SR
+  Clock network: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+Slack: 10.933ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 13.333ns
+  High pulse: 6.666ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_11_OBUF/SR
+  Logical resource: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf/bit[11].ODDR/SR
+  Location pin: OLOGIC_X0Y199.SR
+  Clock network: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+Slack: 10.933ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 13.333ns
+  High pulse: 6.666ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_0_OBUF/SR
+  Logical resource: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf/bit[0].ODDR/SR
+  Location pin: OLOGIC_X0Y188.SR
+  Clock network: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_A_CRG_CLKDV_BUF = PERIOD TIMEGRP "A_CRG_CLKDV_BUF" 
+TS_sys_clk_pin / 2 HIGH         50%;
+
+ 5567 paths analyzed, 1004 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   4.944ns.
+--------------------------------------------------------------------------------
+Slack (setup path):     15.056ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               A_PS2_KEY_MOUSE/A0_MOUSE/m1/bit_count_4 (FF)
+  Destination:          A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.802ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.017ns (0.136 - 0.153)
+  Source Clock:         Clock50 rising at 0.000ns
+  Destination Clock:    Clock50 rising at 20.000ns
+  Clock Uncertainty:    0.125ns
+
+  Clock Uncertainty:          0.125ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.180ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: A_PS2_KEY_MOUSE/A0_MOUSE/m1/bit_count_4 to A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X45Y16.AQ      Tcko                  0.450   A_PS2_KEY_MOUSE/A0_MOUSE/m1/bit_count<5>
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/bit_count_4
+    SLICE_X44Y16.A1      net (fanout=8)        0.941   A_PS2_KEY_MOUSE/A0_MOUSE/m1/bit_count<4>
+    SLICE_X44Y16.A       Tilo                  0.094   N192
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<0>11311
+    SLICE_X45Y18.A3      net (fanout=3)        0.737   N169
+    SLICE_X45Y18.A       Tilo                  0.094   N27
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state_and00051
+    SLICE_X44Y14.B1      net (fanout=4)        1.086   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state_and0005
+    SLICE_X44Y14.B       Tilo                  0.094   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>137
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>137
+    SLICE_X44Y14.A5      net (fanout=1)        0.244   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>137
+    SLICE_X44Y14.A       Tilo                  0.094   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>137
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>165
+    SLICE_X45Y14.SR      net (fanout=1)        0.423   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>165
+    SLICE_X45Y14.CLK     Tsrck                 0.545   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state<1>
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.802ns (1.371ns logic, 3.431ns route)
+                                                       (28.6% logic, 71.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.195ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               A_PS2_KEY_MOUSE/A0_MOUSE/m1/bit_count_4 (FF)
+  Destination:          A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state_3 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.675ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.005ns (0.148 - 0.153)
+  Source Clock:         Clock50 rising at 0.000ns
+  Destination Clock:    Clock50 rising at 20.000ns
+  Clock Uncertainty:    0.125ns
+
+  Clock Uncertainty:          0.125ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.180ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: A_PS2_KEY_MOUSE/A0_MOUSE/m1/bit_count_4 to A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X45Y16.AQ      Tcko                  0.450   A_PS2_KEY_MOUSE/A0_MOUSE/m1/bit_count<5>
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/bit_count_4
+    SLICE_X44Y16.A1      net (fanout=8)        0.941   A_PS2_KEY_MOUSE/A0_MOUSE/m1/bit_count<4>
+    SLICE_X44Y16.A       Tilo                  0.094   N192
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<0>11311
+    SLICE_X45Y18.A3      net (fanout=3)        0.737   N169
+    SLICE_X45Y18.A       Tilo                  0.094   N27
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state_and00051
+    SLICE_X45Y21.D2      net (fanout=4)        1.116   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state_and0005
+    SLICE_X45Y21.D       Tilo                  0.094   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<3>114
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<3>114
+    SLICE_X45Y19.SR      net (fanout=1)        0.604   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<3>114
+    SLICE_X45Y19.CLK     Tsrck                 0.545   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state<3>
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.675ns (1.277ns logic, 3.398ns route)
+                                                       (27.3% logic, 72.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     15.208ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               A_PS2_KEY_MOUSE/A0_MOUSE/m1/m1_state_0 (FF)
+  Destination:          A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state_1 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      4.636ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.031ns (1.253 - 1.284)
+  Source Clock:         Clock50 rising at 0.000ns
+  Destination Clock:    Clock50 rising at 20.000ns
+  Clock Uncertainty:    0.125ns
+
+  Clock Uncertainty:          0.125ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.180ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: A_PS2_KEY_MOUSE/A0_MOUSE/m1/m1_state_0 to A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X47Y27.CQ      Tcko                  0.450   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m1_state<1>
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m1_state_0
+    SLICE_X45Y18.B4      net (fanout=10)       1.257   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m1_state<0>
+    SLICE_X45Y18.B       Tilo                  0.094   N27
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>141
+    SLICE_X45Y18.A5      net (fanout=4)        0.255   N27
+    SLICE_X45Y18.A       Tilo                  0.094   N27
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state_and00051
+    SLICE_X44Y14.B1      net (fanout=4)        1.086   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state_and0005
+    SLICE_X44Y14.B       Tilo                  0.094   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>137
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>137
+    SLICE_X44Y14.A5      net (fanout=1)        0.244   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>137
+    SLICE_X44Y14.A       Tilo                  0.094   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>137
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>165
+    SLICE_X45Y14.SR      net (fanout=1)        0.423   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_next_state<1>165
+    SLICE_X45Y14.CLK     Tsrck                 0.545   A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state<1>
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/m2_state_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.636ns (1.371ns logic, 3.265ns route)
+                                                       (29.6% logic, 70.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_A_CRG_CLKDV_BUF = PERIOD TIMEGRP "A_CRG_CLKDV_BUF" TS_sys_clk_pin / 2 HIGH
+        50%;
+--------------------------------------------------------------------------------
+Slack (hold path):      0.470ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_1 (FF)
+  Destination:          A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.470ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Clock50 rising at 20.000ns
+  Destination Clock:    Clock50 rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_1 to A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y94.BQ      Tcko                  0.414   A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg<3>
+                                                       A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_1
+    SLICE_X33Y94.AX      net (fanout=2)        0.285   A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg<1>
+    SLICE_X33Y94.CLK     Tckdi       (-Th)     0.229   A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg<3>
+                                                       A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.470ns (0.185ns logic, 0.285ns route)
+                                                       (39.4% logic, 60.6% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.470ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_5 (FF)
+  Destination:          A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_4 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.470ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Clock50 rising at 20.000ns
+  Destination Clock:    Clock50 rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_5 to A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y90.BQ      Tcko                  0.414   A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg<7>
+                                                       A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_5
+    SLICE_X31Y90.AX      net (fanout=2)        0.285   A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg<5>
+    SLICE_X31Y90.CLK     Tckdi       (-Th)     0.229   A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg<7>
+                                                       A_PS2_KEY_MOUSE/A1_KEYBOARD/A0_PS2_Data_In/data_shift_reg_4
+    -------------------------------------------------  ---------------------------
+    Total                                      0.470ns (0.185ns logic, 0.285ns route)
+                                                       (39.4% logic, 60.6% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.474ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               A_PS2_KEY_MOUSE/A0_MOUSE/m1/q_21 (FF)
+  Destination:          A_PS2_KEY_MOUSE/A0_MOUSE/m1/q_20 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.474ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Clock50 rising at 20.000ns
+  Destination Clock:    Clock50 rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: A_PS2_KEY_MOUSE/A0_MOUSE/m1/q_21 to A_PS2_KEY_MOUSE/A0_MOUSE/m1/q_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y10.BQ      Tcko                  0.414   A_PS2_KEY_MOUSE/A0_MOUSE/m1/q<23>
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/q_21
+    SLICE_X43Y10.AX      net (fanout=2)        0.289   A_PS2_KEY_MOUSE/A0_MOUSE/m1/q<21>
+    SLICE_X43Y10.CLK     Tckdi       (-Th)     0.229   A_PS2_KEY_MOUSE/A0_MOUSE/m1/q<23>
+                                                       A_PS2_KEY_MOUSE/A0_MOUSE/m1/q_20
+    -------------------------------------------------  ---------------------------
+    Total                                      0.474ns (0.185ns logic, 0.289ns route)
+                                                       (39.0% logic, 61.0% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_A_CRG_CLKDV_BUF = PERIOD TIMEGRP "A_CRG_CLKDV_BUF" TS_sys_clk_pin / 2 HIGH
+        50%;
+--------------------------------------------------------------------------------
+Slack: 18.946ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.527ns (Trpw)
+  Physical resource: A_PS2_KEY_MOUSE/A2_KEYBOARD_CTRL/cnt_wait<3>/SR
+  Logical resource: A_PS2_KEY_MOUSE/A2_KEYBOARD_CTRL/cnt_wait_0/SR
+  Location pin: SLICE_X50Y57.SR
+  Clock network: A_AUDIO/A0_IF/A_BUTTON_PLS/rst_n_inv
+--------------------------------------------------------------------------------
+Slack: 18.946ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 0.527ns (Trpw)
+  Physical resource: A_PS2_KEY_MOUSE/A2_KEYBOARD_CTRL/cnt_wait<3>/SR
+  Logical resource: A_PS2_KEY_MOUSE/A2_KEYBOARD_CTRL/cnt_wait_0/SR
+  Location pin: SLICE_X50Y57.SR
+  Clock network: A_AUDIO/A0_IF/A_BUTTON_PLS/rst_n_inv
+--------------------------------------------------------------------------------
+Slack: 18.946ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 0.527ns (Trpw)
+  Physical resource: A_PS2_KEY_MOUSE/A2_KEYBOARD_CTRL/cnt_wait<3>/SR
+  Logical resource: A_PS2_KEY_MOUSE/A2_KEYBOARD_CTRL/cnt_wait_1/SR
+  Location pin: SLICE_X50Y57.SR
+  Clock network: A_AUDIO/A0_IF/A_BUTTON_PLS/rst_n_inv
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_A_CRG_CLKFX_BUF_0 = PERIOD TIMEGRP "A_CRG_CLKFX_BUF_0" 
+TS_sys_clk_pin *         0.75 HIGH 50%;
+
+ 127060 paths analyzed, 4723 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  11.354ns.
+--------------------------------------------------------------------------------
+Slack (setup path):     1.979ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               A_DVI_TELE_TXRX/DISP_MODE_1 (FF)
+  Destination:          A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_0 (FF)
+  Requirement:          13.333ns
+  Data Path Delay:      11.023ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.200ns (1.188 - 1.388)
+  Source Clock:         Clock75 rising at 0.000ns
+  Destination Clock:    Clock75 rising at 13.333ns
+  Clock Uncertainty:    0.131ns
+
+  Clock Uncertainty:          0.131ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.190ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: A_DVI_TELE_TXRX/DISP_MODE_1 to A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y81.DQ       Tcko                  0.450   A_DVI_TELE_TXRX/DISP_MODE<1>
+                                                       A_DVI_TELE_TXRX/DISP_MODE_1
+    SLICE_X27Y51.C5      net (fanout=37)       3.297   A_DVI_TELE_TXRX/DISP_MODE<1>
+    SLICE_X27Y51.C       Tilo                  0.094   N24
+                                                       A_DVI_TELE_TXRX/i_disp_adr<6>11
+    SLICE_X27Y52.B1      net (fanout=11)       1.044   N24
+    SLICE_X27Y52.B       Tilo                  0.094   A_DVI_TELE_TXRX/i_disp_adr<5>
+                                                       A_DVI_TELE_TXRX/i_disp_adr<5>1
+    SLICE_X36Y68.C1      net (fanout=8)        3.198   A_DVI_TELE_TXRX/i_disp_adr<5>
+    SLICE_X36Y68.C       Tilo                  0.094   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/N24
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_64_and000021
+    SLICE_X39Y86.D1      net (fanout=16)       1.938   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/N24
+    SLICE_X39Y86.D       Tilo                  0.094   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_66_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_and00001
+    SLICE_X38Y87.CE      net (fanout=1)        0.491   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_and0000
+    SLICE_X38Y87.CLK     Tceck                 0.229   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_0
+    -------------------------------------------------  ---------------------------
+    Total                                     11.023ns (1.055ns logic, 9.968ns route)
+                                                       (9.6% logic, 90.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.979ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               A_DVI_TELE_TXRX/DISP_MODE_1 (FF)
+  Destination:          A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_2 (FF)
+  Requirement:          13.333ns
+  Data Path Delay:      11.023ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.200ns (1.188 - 1.388)
+  Source Clock:         Clock75 rising at 0.000ns
+  Destination Clock:    Clock75 rising at 13.333ns
+  Clock Uncertainty:    0.131ns
+
+  Clock Uncertainty:          0.131ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.190ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: A_DVI_TELE_TXRX/DISP_MODE_1 to A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y81.DQ       Tcko                  0.450   A_DVI_TELE_TXRX/DISP_MODE<1>
+                                                       A_DVI_TELE_TXRX/DISP_MODE_1
+    SLICE_X27Y51.C5      net (fanout=37)       3.297   A_DVI_TELE_TXRX/DISP_MODE<1>
+    SLICE_X27Y51.C       Tilo                  0.094   N24
+                                                       A_DVI_TELE_TXRX/i_disp_adr<6>11
+    SLICE_X27Y52.B1      net (fanout=11)       1.044   N24
+    SLICE_X27Y52.B       Tilo                  0.094   A_DVI_TELE_TXRX/i_disp_adr<5>
+                                                       A_DVI_TELE_TXRX/i_disp_adr<5>1
+    SLICE_X36Y68.C1      net (fanout=8)        3.198   A_DVI_TELE_TXRX/i_disp_adr<5>
+    SLICE_X36Y68.C       Tilo                  0.094   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/N24
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_64_and000021
+    SLICE_X39Y86.D1      net (fanout=16)       1.938   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/N24
+    SLICE_X39Y86.D       Tilo                  0.094   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_66_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_and00001
+    SLICE_X38Y87.CE      net (fanout=1)        0.491   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_and0000
+    SLICE_X38Y87.CLK     Tceck                 0.229   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_2
+    -------------------------------------------------  ---------------------------
+    Total                                     11.023ns (1.055ns logic, 9.968ns route)
+                                                       (9.6% logic, 90.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.979ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               A_DVI_TELE_TXRX/DISP_MODE_1 (FF)
+  Destination:          A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_1 (FF)
+  Requirement:          13.333ns
+  Data Path Delay:      11.023ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.200ns (1.188 - 1.388)
+  Source Clock:         Clock75 rising at 0.000ns
+  Destination Clock:    Clock75 rising at 13.333ns
+  Clock Uncertainty:    0.131ns
+
+  Clock Uncertainty:          0.131ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.190ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path: A_DVI_TELE_TXRX/DISP_MODE_1 to A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y81.DQ       Tcko                  0.450   A_DVI_TELE_TXRX/DISP_MODE<1>
+                                                       A_DVI_TELE_TXRX/DISP_MODE_1
+    SLICE_X27Y51.C5      net (fanout=37)       3.297   A_DVI_TELE_TXRX/DISP_MODE<1>
+    SLICE_X27Y51.C       Tilo                  0.094   N24
+                                                       A_DVI_TELE_TXRX/i_disp_adr<6>11
+    SLICE_X27Y52.B1      net (fanout=11)       1.044   N24
+    SLICE_X27Y52.B       Tilo                  0.094   A_DVI_TELE_TXRX/i_disp_adr<5>
+                                                       A_DVI_TELE_TXRX/i_disp_adr<5>1
+    SLICE_X36Y68.C1      net (fanout=8)        3.198   A_DVI_TELE_TXRX/i_disp_adr<5>
+    SLICE_X36Y68.C       Tilo                  0.094   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/N24
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_64_and000021
+    SLICE_X39Y86.D1      net (fanout=16)       1.938   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/N24
+    SLICE_X39Y86.D       Tilo                  0.094   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_66_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_and00001
+    SLICE_X38Y87.CE      net (fanout=1)        0.491   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_and0000
+    SLICE_X38Y87.CLK     Tceck                 0.229   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_67_1
+    -------------------------------------------------  ---------------------------
+    Total                                     11.023ns (1.055ns logic, 9.968ns route)
+                                                       (9.6% logic, 90.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_A_CRG_CLKFX_BUF_0 = PERIOD TIMEGRP "A_CRG_CLKFX_BUF_0" TS_sys_clk_pin *
+        0.75 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack (hold path):      0.312ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_2 (FF)
+  Destination:          A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.478ns (Levels of Logic = 0)
+  Clock Path Skew:      0.166ns (1.401 - 1.235)
+  Source Clock:         Clock75 rising at 0.000ns
+  Destination Clock:    Clock75 rising at 13.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_2 to A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y20.CQ      Tcko                  0.414   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_2
+    SLICE_X50Y19.CX      net (fanout=1)        0.282   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_2
+    SLICE_X50Y19.CLK     Tckdi       (-Th)     0.218   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.478ns (0.196ns logic, 0.282ns route)
+                                                       (41.0% logic, 59.0% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.319ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_0 (FF)
+  Destination:          A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.485ns (Levels of Logic = 0)
+  Clock Path Skew:      0.166ns (1.401 - 1.235)
+  Source Clock:         Clock75 rising at 0.000ns
+  Destination Clock:    Clock75 rising at 13.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_0 to A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y20.AQ      Tcko                  0.414   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_0
+    SLICE_X50Y19.AX      net (fanout=1)        0.300   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_0
+    SLICE_X50Y19.CLK     Tckdi       (-Th)     0.229   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.485ns (0.185ns logic, 0.300ns route)
+                                                       (38.1% logic, 61.9% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.331ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_3 (FF)
+  Destination:          A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.497ns (Levels of Logic = 0)
+  Clock Path Skew:      0.166ns (1.401 - 1.235)
+  Source Clock:         Clock75 rising at 0.000ns
+  Destination Clock:    Clock75 rising at 13.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_3 to A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y20.DQ      Tcko                  0.414   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_3
+    SLICE_X50Y19.DX      net (fanout=1)        0.302   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_0_30_3
+    SLICE_X50Y19.CLK     Tckdi       (-Th)     0.219   A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_3
+                                                       A_DVI_TELE_TXRX/A_DISPLAY/A1_DISP_DIGIT/disp_buf_1_30_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.497ns (0.195ns logic, 0.302ns route)
+                                                       (39.2% logic, 60.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_A_CRG_CLKFX_BUF_0 = PERIOD TIMEGRP "A_CRG_CLKFX_BUF_0" TS_sys_clk_pin *
+        0.75 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 10.933ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 13.333ns
+  High pulse: 6.666ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_10_OBUF/SR
+  Logical resource: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf/bit[10].ODDR/SR
+  Location pin: OLOGIC_X0Y198.SR
+  Clock network: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+Slack: 10.933ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 13.333ns
+  High pulse: 6.666ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_11_OBUF/SR
+  Logical resource: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf/bit[11].ODDR/SR
+  Location pin: OLOGIC_X0Y199.SR
+  Clock network: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+Slack: 10.933ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 13.333ns
+  High pulse: 6.666ns
+  High pulse limit: 1.200ns (Tospwh)
+  Physical resource: DVI_D_0_OBUF/SR
+  Logical resource: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf/bit[0].ODDR/SR
+  Location pin: OLOGIC_X0Y188.SR
+  Clock network: A_DVI_TELE_TXRX/A_DVI/DVIData/VideoBuf_not0000
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     10.000ns|      8.332ns|      8.515ns|            0|            0|            0|       132627|
+| TS_A_CRG_CLKFX_BUF            |     13.333ns|      2.400ns|          N/A|            0|            0|            0|            0|
+| TS_A_CRG_CLKFX_BUF_1          |     13.333ns|      2.400ns|          N/A|            0|            0|            0|            0|
+| TS_A_CRG_CLKDV_BUF            |     20.000ns|      4.944ns|          N/A|            0|            0|         5567|            0|
+| TS_A_CRG_CLKFX_BUF_0          |     13.333ns|     11.354ns|          N/A|            0|            0|       127060|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   11.354|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 132627 paths, 0 nets, and 7515 connections
+
+Design statistics:
+   Minimum period:  11.354ns{1}   (Maximum frequency:  88.075MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Nov 27 15:33:19 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 446 MB
+
+
+

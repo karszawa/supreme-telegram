@@ -1,0 +1,44 @@
+Release 11.1 - xst L.57 (lin64)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/jikken17/FPGA_TOP/ISE/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/jikken17/FPGA_TOP/ISE/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../rtl/dvi/draw_rect.v" in library work
+Compiling verilog file "clock_gen.v" in library work
+Module <draw_rect> compiled
+Compiling verilog file "clockgen.v" in library work
+Module <clock_gen> compiled
+Module <clockgen> compiled
+No errors in compilation
+Analysis of file <"draw_rect.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+
+
+Total memory usage is 393816 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
