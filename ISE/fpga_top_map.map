@@ -11,7 +11,7 @@ Target Device  : xc5vlx50
 Target Package : ff676
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.51.18.1 $
-Mapped Date    : Mon Nov 27 16:48:32 2017
+Mapped Date    : Tue Nov 28 15:00:11 2017
 
 vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to
@@ -66,181 +66,50 @@ Total REAL time at the beginning of Placer: 9 secs
 Total CPU  time at the beginning of Placer: 8 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:3cb99930) REAL time: 9 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:4765c686) REAL time: 10 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:3cb99930) REAL time: 9 secs 
+Phase 2.7  Design Feasibility Check (Checksum:4765c686) REAL time: 10 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:3cb99930) REAL time: 9 secs 
+Phase 3.31  Local Placement Optimization (Checksum:4765c686) REAL time: 10 secs 
 
 Phase 4.37  Local Placement Optimization
-Phase 4.37  Local Placement Optimization (Checksum:3cb99930) REAL time: 9 secs 
+Phase 4.37  Local Placement Optimization (Checksum:4765c686) REAL time: 10 secs 
 
 Phase 5.33  Local Placement Optimization
-Phase 5.33  Local Placement Optimization (Checksum:3cb99930) REAL time: 11 secs 
+Phase 5.33  Local Placement Optimization (Checksum:4765c686) REAL time: 11 secs 
 
 Phase 6.32  Local Placement Optimization
-Phase 6.32  Local Placement Optimization (Checksum:3cb99930) REAL time: 11 secs 
+Phase 6.32  Local Placement Optimization (Checksum:4765c686) REAL time: 12 secs 
 
 Phase 7.2  Initial Clock and IO Placement
 
-Phase 7.2  Initial Clock and IO Placement (Checksum:dba29d9f) REAL time: 12 secs 
+.........
+ERROR:Place:645 - A clock IOB clock component is not placed at an optimal clock
+   IOB site. The clock IOB component <rst_n> is placed at site <IOB_X0Y79>. The
+   clock IO site can use the fast path between the IO and the Clock buffer/GCLK
+   if the IOB is placed in the master Clock IOB Site. If this sub optimal
+   condition is acceptable for this design, you may use the
+   CLOCK_DEDICATED_ROUTE constraint in the .ucf file to demote this message to a
+   WARNING and allow your design to continue. However, the use of this override
+   is highly discouraged as it may lead to very poor timing results. It is
+   recommended that this error condition be corrected in the design. A list of
+   all the COMP.PINs used in this clock placement rule is listed below. These
+   examples can be used directly in the .ucf file to override this clock rule.
+   < NET "rst_n" CLOCK_DEDICATED_ROUTE = FALSE; >
 
-Phase 8.36  Local Placement Optimization
-Phase 8.36  Local Placement Optimization (Checksum:dba29d9f) REAL time: 12 secs 
+Phase 7.2  Initial Clock and IO Placement (Checksum:b16b079e) REAL time: 12 secs 
 
-Phase 9.30  Global Clock Region Assignment
-Phase 9.30  Global Clock Region Assignment (Checksum:dba29d9f) REAL time: 12 secs 
-
-Phase 10.3  Local Placement Optimization
-Phase 10.3  Local Placement Optimization (Checksum:dba29d9f) REAL time: 12 secs 
-
-Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:dba29d9f) REAL time: 12 secs 
-
-Phase 12.8  Global Placement
-......................................................................................
-......................................................................................................................
-Phase 12.8  Global Placement (Checksum:972995) REAL time: 16 secs 
-
-Phase 13.29  Local Placement Optimization
-Phase 13.29  Local Placement Optimization (Checksum:972995) REAL time: 16 secs 
-
-Phase 14.5  Local Placement Optimization
-Phase 14.5  Local Placement Optimization (Checksum:972995) REAL time: 16 secs 
-
-Phase 15.18  Placement Optimization
-Phase 15.18  Placement Optimization (Checksum:14882d6e) REAL time: 34 secs 
-
-Phase 16.5  Local Placement Optimization
-Phase 16.5  Local Placement Optimization (Checksum:14882d6e) REAL time: 34 secs 
-
-Phase 17.34  Placement Validation
-Phase 17.34  Placement Validation (Checksum:14882d6e) REAL time: 34 secs 
-
-Total REAL time to Placer completion: 34 secs 
-Total CPU  time to Placer completion: 33 secs 
-Running post-placement packing...
-Writing output files...
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   A_PS2_KEY_MOUSE/A2_KEYBOARD_CTRL/nxtSTATE_not0001 is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:367 - The signal <DIP<0>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<1>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<2>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<3>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<4>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<5>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<6>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<7>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <CLK_33MHZ_FPGA_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.1 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.2 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.3 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.4 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.5 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.6 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.7 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.8 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.9 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.10 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.11 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.12 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.13 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.14 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.15 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.16 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.17 is set but the tri state is not configured. 
-
-Design Summary
---------------
-
-Design Summary:
-Number of errors:      0
-Number of warnings:   35
-Slice Logic Utilization:
-  Number of Slice Registers:                 3,256 out of  28,800   11%
-    Number used as Flip Flops:               3,254
-    Number used as Latches:                      2
-  Number of Slice LUTs:                      2,286 out of  28,800    7%
-    Number used as logic:                    2,251 out of  28,800    7%
-      Number using O6 output only:           1,812
-      Number using O5 output only:             243
-      Number using O5 and O6:                  196
-    Number used as Memory:                      17 out of   7,680    1%
-      Number used as Dual Port RAM:              8
-        Number using O6 output only:             4
-        Number using O5 and O6:                  4
-      Number used as Shift Register:             9
-        Number using O6 output only:             9
-    Number used as exclusive route-thru:        18
-  Number of route-thrus:                       260
-    Number using O6 output only:               260
-
-Slice Logic Distribution:
-  Number of occupied Slices:                 1,256 out of   7,200   17%
-  Number of LUT Flip Flop pairs used:        4,115
-    Number with an unused Flip Flop:           859 out of   4,115   20%
-    Number with an unused LUT:               1,829 out of   4,115   44%
-    Number of fully used LUT-FF pairs:       1,427 out of   4,115   34%
-    Number of unique control sets:             124
-    Number of slice register sites lost
-      to control set restrictions:             151 out of  28,800    1%
-
-  A LUT Flip Flop pair for this architecture represents one LUT paired with
-  one Flip Flop within a slice.  A control set is a unique combination of
-  clock, reset, set, and enable signals for a registered element.
-  The Slice Logic Distribution report is not meaningful if the design is
-  over-mapped for a non-slice resource or if Placement fails.
-  OVERMAPPING of BRAM resources should be ignored if the design is
-  over-mapped for a non-BRAM resource or if placement fails.
-
-IO Utilization:
-  Number of bonded IOBs:                        71 out of     440   16%
-    Number of LOCed IOBs:                       71 out of      71  100%
-    IOB Flip Flops:                             14
-
-Specific Feature Utilization:
-  Number of BUFG/BUFGCTRLs:                      8 out of      32   25%
-    Number used as BUFGs:                        8
-  Number of DCM_ADVs:                            1 out of      12    8%
-  Number of PLL_ADVs:                            2 out of       6   33%
-
-Average Fanout of Non-Clock Nets:                3.57
-
-Peak Memory Usage:  826 MB
-Total REAL time to MAP completion:  36 secs 
-Total CPU time to MAP completion:   36 secs 
+Total REAL time to Placer completion: 12 secs 
+Total CPU  time to Placer completion: 12 secs 
+ERROR:Pack:1654 - The timing-driven placement phase encountered an error.
 
 Mapping completed.
 See MAP report file "fpga_top_map.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   7

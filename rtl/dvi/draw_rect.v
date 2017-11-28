@@ -47,6 +47,10 @@ parameter		BG_COLOR_RED	= 8'd0;
 parameter		BG_COLOR_GRN	= 8'd0;
 parameter		BG_COLOR_BLU	= 8'd0;
 
+parameter COLOR_BLANK = 4'd0;
+parameter COLOR_OUTER = 4'd1;
+parameter COLOR_BLOCK = 4'd2;
+
 reg		[11-1: 0]		r_cnt_x;
 reg		[11-1: 0]		r_cnt_y;
 
@@ -54,14 +58,14 @@ reg		[11-1: 0]		r_cnt_y;
 reg		[11-1: 0]		r_pos_x;
 reg		[11-1: 0]		r_pos_y;
 
-reg								area;
-
-reg [1025:0] board;
+reg	[3:0] area;
+//reg [1023:0] board;
+reg [799:0] board=800'd0;
 
 assign i_sync_all = i_sync_vs & i_sync_hs & i_sync_va & i_sync_ha & i_sync_de;
 always @ (posedge clk or negedge rst_n) begin
 	if (~rst_n) begin
-		board <= 1026'd16640;
+		board <= 1024'h1000_0000_0111;
 		
 		r_cnt_x	<= 11'd0;
 		r_cnt_y	<= 11'd0;
@@ -74,26 +78,22 @@ always @ (posedge clk or negedge rst_n) begin
 				r_cnt_y	<= r_cnt_y + 1;
 			end
 		end else begin
-				r_cnt_x	<= r_cnt_x + 1;
+			r_cnt_x	<= r_cnt_x + 1;
 		end
 	end
 end
 
-wire [3:0] tmp;
+wire [15:0] tmp;
 assign tmp = ((r_cnt_y >> 4) * 10 + (r_cnt_x >> 4)) * 4;
 
 // AREA
-always @ (*) begin	
+always @ (*) begin
 	if ((r_cnt_x > 320) || r_cnt_y > 640) begin
-		area <= 1;
-	end else if ((r_cnt_x >> 1) % 16 == 0) begin
-		area <= 0;
-	end else if ((r_cnt_y >> 1) % 16 == 0) begin
-		area <= 0;
+		area <= COLOR_OUTER;
 	end else if (board[tmp+:4] != 4'd0) begin
-		area <= 1;
+		area <= COLOR_BLOCK;
 	end else begin
-		area <= 0;
+		area <= COLOR_BLANK;
 	end
 end
 
@@ -113,9 +113,18 @@ always @ (posedge clk or negedge rst_n) begin
 		o_sync_va		<= i_sync_va	;
 		o_sync_ha		<= i_sync_ha	;
 		o_sync_de		<= i_sync_de	;
-		o_sync_red	<= (area) ? RECT_COLOR_RED : BG_COLOR_RED	;
-		o_sync_grn	<= (area) ? RECT_COLOR_GRN : BG_COLOR_GRN	;
-		o_sync_blu	<= (area) ? RECT_COLOR_BLU : BG_COLOR_BLU	;
+		
+		o_sync_red	<= (area == COLOR_BLANK ? 8'd0:
+					   (area == COLOR_OUTER ? 8'd200:
+					   (area == COLOR_BLOCK ? 8'd100 : 8'd0)));
+					
+		o_sync_grn	<= (area == COLOR_BLANK ? 8'd0:
+					   (area == COLOR_OUTER ? 8'd200:
+					   (area == COLOR_BLOCK ? 8'd0 : 8'd0)));
+					   
+		o_sync_blu	<= (area == COLOR_BLANK ? 8'd0:
+					   (area == COLOR_OUTER ? 8'd200:
+					   (area == COLOR_BLOCK ? 8'd0 : 8'd0)));
 	end
 end
 

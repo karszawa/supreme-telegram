@@ -1,0 +1,44 @@
+Release 11.1 - xst L.57 (lin64)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/jikken17/FPGA_TOP/ISE/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/jikken17/FPGA_TOP/ISE/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../rtl/dvi/Register.v" in library work
+Compiling verilog file "../rtl/dvi/HardRegister.v" in library work
+Module <Register> compiled
+Compiling verilog file "../rtl/dvi/FIFORegControl.v" in library work
+Module <HardRegister> compiled
+Compiling verilog file "../rtl/dvi/ShiftRegister.v" in library work
+Module <FIFORegControl> compiled
+Compiling verilog file "../rtl/dvi/FIFORegister.v" in library work
+Module <ShiftRegister> compiled
+Compiling verilog file "../rtl/dvi/Counter.v" in library work
+Module <FIFORegister> compiled
+Compiling verilog file "../rtl/dvi/CountCompare.v" in library work
+ERROR:HDLCompilers:26 - "../rtl/dvi/CountCompare.v" line 43 Could not find verilog include file 'Const.v'
+Analysis of file <"fpga_top.prj"> failed.
+--> 
+
+
+Total memory usage is 393740 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map L.57 on Mon Nov 27 16:49:07 2017
+// Written by: Map L.57 on Tue Nov 28 14:09:59 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -693,7 +693,9 @@ TIMEGRP A_CRG_CLKFX_BUF = BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/r_cnt_x_2" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/r_cnt_x_1" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/r_cnt_x_0" BEL
-        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_0" BEL
+        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_6" BEL
+        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_3" BEL
+        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_2" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_ha" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_va" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_de" BEL
@@ -2394,7 +2396,9 @@ TIMEGRP A_CRG_CLKFX_BUF_1 = BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/r_cnt_x_2" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/r_cnt_x_1" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/r_cnt_x_0" BEL
-        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_0" BEL
+        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_6" BEL
+        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_3" BEL
+        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_2" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_ha" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_va" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_de" BEL
@@ -4095,7 +4099,9 @@ TIMEGRP A_CRG_CLKFX_BUF_0 = BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/r_cnt_x_2" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/r_cnt_x_1" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/r_cnt_x_0" BEL
-        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_0" BEL
+        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_6" BEL
+        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_3" BEL
+        "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_red_2" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_ha" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_va" BEL
         "A_DVI_TELE_TXRX/A_RECT/A2_DRAW/o_sync_de" BEL

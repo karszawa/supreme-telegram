@@ -11,40 +11,37 @@ Target Device  : xc5vlx50
 Target Package : ff676
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.51.18.1 $
-Mapped Date    : Mon Nov 27 16:48:32 2017
+Mapped Date    : Tue Nov 28 15:00:11 2017
 
-Design Summary
---------------
-Number of errors:      0
-Number of warnings:   35
+Interim Summary
+---------------
 Slice Logic Utilization:
-  Number of Slice Registers:                 3,256 out of  28,800   11%
-    Number used as Flip Flops:               3,254
-    Number used as Latches:                      2
-  Number of Slice LUTs:                      2,286 out of  28,800    7%
-    Number used as logic:                    2,251 out of  28,800    7%
-      Number using O6 output only:           1,812
-      Number using O5 output only:             243
-      Number using O5 and O6:                  196
+  Number of Slice Registers:                 3,259 out of  28,800   11%
+    Number used as Flip Flops:               3,256
+    Number used as Latches:                      3
+  Number of Slice LUTs:                      2,298 out of  28,800    7%
+    Number used as logic:                    2,261 out of  28,800    7%
+      Number using O6 output only:           1,822
+      Number using O5 output only:             242
+      Number using O5 and O6:                  197
     Number used as Memory:                      17 out of   7,680    1%
       Number used as Dual Port RAM:              8
         Number using O6 output only:             4
         Number using O5 and O6:                  4
       Number used as Shift Register:             9
         Number using O6 output only:             9
-    Number used as exclusive route-thru:        18
-  Number of route-thrus:                       260
-    Number using O6 output only:               260
+    Number used as exclusive route-thru:        20
+  Number of route-thrus:                       262
+    Number using O6 output only:               262
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,256 out of   7,200   17%
-  Number of LUT Flip Flop pairs used:        4,115
-    Number with an unused Flip Flop:           859 out of   4,115   20%
-    Number with an unused LUT:               1,829 out of   4,115   44%
-    Number of fully used LUT-FF pairs:       1,427 out of   4,115   34%
+  Number of LUT Flip Flop pairs used:        4,430
+    Number with an unused Flip Flop:         1,171 out of   4,430   26%
+    Number with an unused LUT:               2,132 out of   4,430   48%
+    Number of fully used LUT-FF pairs:       1,127 out of   4,430   25%
     Number of unique control sets:             124
     Number of slice register sites lost
-      to control set restrictions:             151 out of  28,800    1%
+      to control set restrictions:             148 out of  28,800    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -60,36 +57,33 @@ IO Utilization:
     IOB Flip Flops:                             14
 
 Specific Feature Utilization:
-  Number of BUFG/BUFGCTRLs:                      8 out of      32   25%
-    Number used as BUFGs:                        8
+  Number of BUFG/BUFGCTRLs:                      9 out of      32   28%
+    Number used as BUFGs:                        9
   Number of DCM_ADVs:                            1 out of      12    8%
   Number of PLL_ADVs:                            2 out of       6   33%
 
-Average Fanout of Non-Clock Nets:                3.57
 
-Peak Memory Usage:  826 MB
-Total REAL time to MAP completion:  36 secs 
-Total CPU time to MAP completion:   36 secs 
-
-Table of Contents
------------------
-Section 1 - Errors
-Section 2 - Warnings
-Section 3 - Informational
-Section 4 - Removed Logic Summary
-Section 5 - Removed Logic
-Section 6 - IOB Properties
-Section 7 - RPMs
-Section 8 - Guide Report
-Section 9 - Area Group and Partition Summary
-Section 10 - Modular Design Summary
-Section 11 - Timing Report
-Section 12 - Configuration String Information
-Section 13 - Control Set Information
-Section 14 - Utilization by Hierarchy
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   7
 
 Section 1 - Errors
 ------------------
+ERROR:Place:645 - A clock IOB clock component is not placed at an optimal clock
+   IOB site. The clock IOB component <rst_n> is placed at site <IOB_X0Y79>. The
+   clock IO site can use the fast path between the IO and the Clock buffer/GCLK
+   if the IOB is placed in the master Clock IOB Site. If this sub optimal
+   condition is acceptable for this design, you may use the
+   CLOCK_DEDICATED_ROUTE constraint in the .ucf file to demote this message to a
+   WARNING and allow your design to continue. However, the use of this override
+   is highly discouraged as it may lead to very poor timing results. It is
+   recommended that this error condition be corrected in the design. A list of
+   all the COMP.PINs used in this clock placement rule is listed below. These
+   examples can be used directly in the .ucf file to override this clock rule.
+   < NET "rst_n" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+ERROR:Pack:1654 - The timing-driven placement phase encountered an error.
 
 Section 2 - Warnings
 --------------------
@@ -126,64 +120,6 @@ WARNING:Pack:2515 - The LUT-1 inverter "A_LCD/A1_LCD/inst/lcddata_en_inv1_INV_0"
    failed to join the OLOGIC comp matched to output buffer
    "LCD_DATA_3_IOBUF/OBUFT".  This may result in suboptimal timing.  The LUT-1
    inverter A_LCD/A1_LCD/inst/lcddata_en_inv1_INV_0 drives multiple loads.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   A_PS2_KEY_MOUSE/A2_KEYBOARD_CTRL/nxtSTATE_not0001 is sourced by a
-   combinatorial pin. This is not good design practice. Use the CE pin to
-   control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:367 - The signal <DIP<0>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<1>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<2>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<3>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<4>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<5>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<6>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <DIP<7>_IBUF> is incomplete. The signal
-   does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <CLK_33MHZ_FPGA_IBUF> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.1 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.2 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.3 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.4 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.5 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.6 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.7 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.8 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.9 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.10 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.11 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.12 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.13 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.14 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.15 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.16 is set but the tri state is not configured. 
-WARNING:PhysDesignRules:781 - PULLDOWN on an active net. PULLDOWN of comp
-   ProtoComp477.PULL.17 is set but the tri state is not configured. 
 
 Section 3 - Informational
 -------------------------
@@ -204,10 +140,6 @@ INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
    1.050 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Pack:1650 - Map created a placed design.
-INFO:PhysDesignRules:1437 - To achieve optimal frequency synthesis performance
-   with the CLKFX and CLKFX180 outputs of the DCM_ADV comp A_CRG/DCM_ADV_INST,
-   consult the device Data Sheet.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
@@ -1069,126 +1001,6 @@ VCC 		XST_VCC
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.
 
-Section 6 - IOB Properties
---------------------------
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
-|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| BUTTON_C                           | IOB              | INPUT     | LVDCI_33             |       |          |      |              |          |          |
-| BUTTON_E                           | IOB              | INPUT     | LVDCI_33             |       |          |      |              |          |          |
-| BUTTON_N                           | IOB              | INPUT     | LVDCI_33             |       |          |      |              |          |          |
-| BUTTON_S                           | IOB              | INPUT     | LVDCI_33             |       |          |      |              |          |          |
-| BUTTON_W                           | IOB              | INPUT     | LVDCI_33             |       |          |      |              |          |          |
-| CLK_27MHZ_FPGA                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| CLK_33MHZ_FPGA                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| CLK_DIFF_FPGA_N                    | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| CLK_DIFF_FPGA_P                    | IOB              | INPUT     | LVDS_25              | FALSE |          |      |              |          |          |
-| DIP<0>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
-| DIP<1>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
-| DIP<2>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
-| DIP<3>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
-| DIP<4>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
-| DIP<5>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
-| DIP<6>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
-| DIP<7>                             | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
-| DVI_D<0>                           | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<1>                           | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<2>                           | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<3>                           | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<4>                           | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<5>                           | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<6>                           | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<7>                           | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<8>                           | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<9>                           | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<10>                          | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_D<11>                          | IOB              | OUTPUT    | LVDCI_33             |       |          |      | ODDR         |          |          |
-| DVI_DE                             | IOB              | OUTPUT    | LVDCI_33             |       |          |      |              |          |          |
-| DVI_H                              | IOB              | OUTPUT    | LVDCI_33             |       |          |      |              |          |          |
-| DVI_RESET_B                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| DVI_V                              | IOB              | OUTPUT    | LVDCI_33             |       |          |      |              |          |          |
-| DVI_XCLK_N                         | IOB              | OUTPUT    | LVCMOS33             |       | 24       | FAST | ODDR         |          |          |
-| DVI_XCLK_P                         | IOB              | OUTPUT    | LVCMOS33             |       | 24       | FAST | ODDR         |          |          |
-| I2C_SCL_DVI                        | IOB              | OUTPUT    | LVCMOS33             |       | 24       | FAST |              | PULLUP   |          |
-| I2C_SDA_DVI                        | IOB              | BIDIR     | LVCMOS33             |       | 24       | FAST |              | PULLUP   |          |
-| KEYBOARD_CLK                       | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| LCD_DATA<0>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
-| LCD_DATA<1>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
-| LCD_DATA<2>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
-| LCD_DATA<3>                        | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
-| LCD_EN                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
-| LCD_RS                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
-| LCD_RW                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
-| LED_C                              | IOB              | OUTPUT    | LVCMOS33             |       | 2        | SLOW |              | PULLDOWN |          |
-| LED_E                              | IOB              | OUTPUT    | LVCMOS33             |       | 2        | SLOW |              | PULLDOWN |          |
-| LED_ERR_0                          | IOB              | OUTPUT    | LVCMOS33             |       | 2        | SLOW |              | PULLDOWN |          |
-| LED_ERR_1                          | IOB              | OUTPUT    | LVCMOS33             |       | 2        | SLOW |              | PULLDOWN |          |
-| LED_N                              | IOB              | OUTPUT    | LVCMOS33             |       | 2        | SLOW |              | PULLDOWN |          |
-| LED_S                              | IOB              | OUTPUT    | LVCMOS33             |       | 2        | SLOW |              | PULLDOWN |          |
-| LED_W                              | IOB              | OUTPUT    | LVCMOS33             |       | 2        | SLOW |              | PULLDOWN |          |
-| MOUSE_CLK                          | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| MOUSE_DATA                         | IOB              | BIDIR     | LVCMOS18             |       | 12       | SLOW |              |          |          |
-| TELE_RX                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| TELE_TX                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| TP<0>                              | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLDOWN |          |
-| TP<1>                              | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLDOWN |          |
-| TP<2>                              | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLDOWN |          |
-| TP<3>                              | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLDOWN |          |
-| TP<4>                              | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLDOWN |          |
-| TP<5>                              | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLDOWN |          |
-| TP<6>                              | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLDOWN |          |
-| TP<7>                              | IOB              | OUTPUT    | LVCMOS25             |       | 2        | SLOW |              | PULLDOWN |          |
-| audio_bit_clk                      | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| audio_sdata_in                     | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| audio_sdata_out                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| audio_sync                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| clk                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| flash_audio_reset_b                | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| rst_n                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              | PULLUP   |          |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-Section 7 - RPMs
-----------------
-
-Section 8 - Guide Report
-------------------------
-Guide not run on this design.
-
-Section 9 - Area Group and Partition Summary
---------------------------------------------
-
-Partition Implementation Status
--------------------------------
-
-  No Partitions were found in this design.
-
--------------------------------
-
-Area Group Information
-----------------------
-
-  No area groups were found in this design.
-
-----------------------
-
-Section 10 - Modular Design Summary
------------------------------------
-Modular Design not used for this design.
-
-Section 11 - Timing Report
---------------------------
-A logic-level (pre-route) timing report can be generated by using Xilinx static
-timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
-mapped NCD and PCF files. Please note that this timing report will be generated
-using estimated delay information. For accurate numbers, please generate a
-timing report with the post Place and Route NCD file.
-
-For more information about the Timing Analyzer, consult the Xilinx Timing
-Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
-Command Line Tools User Guide "TRACE" chapter.
-
 Section 12 - Configuration String Details
 -----------------------------------------
 Use the "-detail" map option to print out Configuration Strings
@@ -1196,7 +1008,3 @@ Use the "-detail" map option to print out Configuration Strings
 Section 13 - Control Set Information
 ------------------------------------
 Use the "-detail" map option to print out Control Set Information.
-
-Section 14 - Utilization by Hierarchy
--------------------------------------
-Use the "-detail" map option to print out the Utilization by Hierarchy section.

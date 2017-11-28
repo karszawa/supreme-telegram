@@ -1,0 +1,27 @@
+Release 11.1 - netgen L.57 (lin64)
+Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -insert_glbl true -w -dir netgen/synthesis
+-ofmt verilog -sim fpga_top.ngc DVI_FPGA_synthesis.v  
+
+Reading design 'fpga_top.ngc' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing Verilog netlist file
+'/home/jikken17/FPGA_TOP/ISE/netgen/synthesis/DVI_FPGA_synthesis.v' ...
+INFO:NetListWriters:633 - The generated Verilog netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM simulation library for
+   correct compilation and simulation. 
+INFO:NetListWriters:703 - Setup Simulation - To perform a setup simulation,
+   specify values in the Maximum (MAX) field with the following command line
+   modifier:  -SDFMAX
+INFO:NetListWriters:702 - Hold Simulation - To perform the most accurate hold
+   simulation, specify values in the Minimum (MIN) field with the following
+   command line modifier:  -SDFMIN
+INFO:NetListWriters:665 - For more information on how to pass the SDF switches
+   to the simulator, see your Simulator tool documentation.
+Number of warnings: 0
+Number of info messages: 4
+Total memory usage is 204580 kilobytes

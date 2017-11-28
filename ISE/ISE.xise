@@ -666,7 +666,7 @@
     <property xil_pn:name="Wave window" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Waveform Database Filename Behavioral" xil_pn:value="/home/jikken16/Dropbox/Experiment_TA/2016/ISE/top_isim_beh.wdb" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Waveform Database Filename Post-Route" xil_pn:value="/home/jikken16/Dropbox/Experiment_TA/2016/ISE/top_isim_par.wdb" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Work Directory" xil_pn:value="/home/jikken17/FPGA_TOP/ISE/xst" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Work Directory" xil_pn:value="/home/jikken17/FPGA_TOP/ISE/xst" xil_pn:valueState="default"/>
     <property xil_pn:name="Working Directory" xil_pn:value="." xil_pn:valueState="non-default"/>
     <property xil_pn:name="Write Mapped VHDL Netlist" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Write Mapped Verilog Netlist" xil_pn:value="false" xil_pn:valueState="default"/>
